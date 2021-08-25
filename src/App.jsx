@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import Navbar from "./components/Navbar";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Route, Switch } from "react-router-dom";
-import { Grid, Flexbox } from "./components/Layout";
+import { Flexbox } from "./components/Layout";
 import { sortData } from "./utils";
 import CaseType from "./components/CaseType";
 import Select from "@material-ui/core/Select";
