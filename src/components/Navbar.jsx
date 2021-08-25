@@ -42,13 +42,18 @@ const Navbar = () => {
     return (
         <>
             <div className={classes.root}>
-                <AppBar position="static" className={classes.navbar}>
+                <AppBar className={classes.navbar} position="fixed">
                     <Toolbar>
                         <IconButton
                             edge="start"
                             className={classes.menuButton}
                             color="inherit"
                             aria-label="menu"
+                            onClick={() => {
+                                window.open(
+                                    "https://github.com/AviralCoder/covid19_tracker"
+                                );
+                            }}
                         >
                             <GitHubIcon />
                         </IconButton>
@@ -67,6 +72,8 @@ const Navbar = () => {
                         </IconButton>
                     </Toolbar>
                 </AppBar>
+
+                <Toolbar />
 
                 <Drawer
                     anchor={"right"}
