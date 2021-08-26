@@ -113,7 +113,7 @@ const Navbar = () => {
                             }}
                             text="Vaccine Statistics"
                             icon={<InsertEmoticonIcon />}
-                            to="/indian-cases"
+                            to="/vaccine"
                         />
                     </List>
                 </Drawer>

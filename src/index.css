@@ -65,6 +65,39 @@ body {
     margin-bottom: 20px;
 }
 
+.country-wise {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    left: 50%;
+    margin-top: 20px;
+    width: 50%;
+    color: #fff;
+    transform: translateX(-50%);
+}
+
+.country-wise .right div {
+    margin-top: 30px;
+}
+
+.center-btns {
+    display: flex;
+    position: relative;
+    gap: 15px;
+    margin-bottom: 20px;
+    left: 50%;
+    justify-content: center;
+    transform: translateX(-50%);
+}
+
+.info {
+    background: white;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(1, 1fr) !important;
@@ -79,5 +112,23 @@ body {
     .paper {
         margin-top: 20px;
         width: 90%;
+    }
+
+    .country-wise {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .country-wise img {
+        position: relative;
+        right: 10%;
+    }
+
+    .center-btns {
+        flex-direction: column;
+    }
+
+    .center-btns button {
+        margin: 3px 10px;
     }
 }
