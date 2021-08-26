@@ -8,6 +8,7 @@ import CaseType from "./components/CaseType";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import CaseTable from "./components/CaseTable";
+import CountryWise from "./components/CountryWise";
 
 const App = () => {
     const [casesDetailsWorldwide, setCaseDetailsWorldwide] = useState([
@@ -67,6 +68,8 @@ const App = () => {
     const [countrySelected, setCountrySelected] = useState("India");
 
     const [countries, setCountries] = useState([]);
+
+    const [countryWiseMetaData, setCountryWiseMetaData] = useState({});
 
     const darkTheme = createTheme({
         palette: {
@@ -142,6 +145,39 @@ const App = () => {
 
         getData();
     }, []);
+
+    useEffect(() => {
+        const getData = async () => {
+            const response = await fetch(
+                `https://disease.sh/v3/covid-19/countries/${countrySelected}`
+            );
+
+            const data = await response.json();
+
+            setCountryWiseMetaData({
+                name: data.country,
+                flag: data.countryInfo.flag,
+                cases: data.cases,
+                deaths: data.deaths,
+                recovered: data.recovered,
+                active: data.active,
+                critical: data.critical,
+                tests: data.tests,
+                population: data.population,
+                todayCases: data.todayCases,
+                todayDeaths: data.todayDeaths,
+                todayRecovered: data.todayRecovered,
+                casesPerOneMillion: data.casesPerOneMillion,
+                deathsPerOneMillion: data.deathsPerOneMillion,
+                testsPerOneMillion: data.testsPerOneMillion,
+                activePerOneMillion: data.activePerOneMillion,
+                recoveredPerOneMillion: data.recoveredPerOneMillion,
+                criticalPerOneMillion: data.criticalPerOneMillion,
+            });
+        };
+
+        getData();
+    }, [countrySelected]);
 
     return (
         <>
@@ -237,6 +273,39 @@ const App = () => {
                                 </MenuItem>
                             ))}
                         </Select>
+
+                        <CountryWise
+                            name={countryWiseMetaData.name}
+                            flag={countryWiseMetaData.flag}
+                            cases={countryWiseMetaData.cases}
+                            deaths={countryWiseMetaData.deaths}
+                            recovered={countryWiseMetaData.recovered}
+                            active={countryWiseMetaData.active}
+                            critical={countryWiseMetaData.critical}
+                            tests={countryWiseMetaData.tests}
+                            population={countryWiseMetaData.population}
+                            todayCases={countryWiseMetaData.todayCases}
+                            todayDeaths={countryWiseMetaData.todayDeaths}
+                            todayRecovered={countryWiseMetaData.todayRecovered}
+                            casesPerOneMillion={
+                                countryWiseMetaData.casesPerOneMillion
+                            }
+                            deathsPerOneMillion={
+                                countryWiseMetaData.deathsPerOneMillion
+                            }
+                            testsPerOneMillion={
+                                countryWiseMetaData.testsPerOneMillion
+                            }
+                            activePerOneMillion={
+                                countryWiseMetaData.activePerOneMillion
+                            }
+                            recoveredPerOneMillion={
+                                countryWiseMetaData.recoveredPerOneMillion
+                            }
+                            criticalPerOneMillion={
+                                countryWiseMetaData.criticalPerOneMillion
+                            }
+                        />
                     </Route>
 
                     <Route path="/contribute" exact>
@@ -247,8 +316,8 @@ const App = () => {
                         <h1>info</h1>
                     </Route>
 
-                    <Route path="/indian-cases" exact>
-                        <h1>indian-cases</h1>
+                    <Route path="/vaccine" exact>
+                        <h1>vaccine</h1>
                     </Route>
                 </Switch>
             </ThemeProvider>
