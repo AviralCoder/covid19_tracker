@@ -4,6 +4,7 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import { Route, Switch } from "react-router-dom";
 import { Flexbox } from "./components/Layout";
 import { sortData } from "./utils";
+
 import CaseType from "./components/CaseType";
 import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
