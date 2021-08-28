@@ -204,12 +204,14 @@ const App = () => {
                             }}
                         >
                             {casesDetailsWorldwide.map((elem) => (
-                                <CaseType
-                                    background={elem.background}
-                                    type={elem.type}
-                                    added={elem.added}
-                                    cases={elem.cases}
-                                />
+                                <React.Fragment key={elem.type}>
+                                    <CaseType
+                                        background={elem.background}
+                                        type={elem.type}
+                                        added={elem.added}
+                                        cases={elem.cases}
+                                    />
+                                </React.Fragment>
                             ))}
                         </Flexbox>
 
@@ -220,12 +222,14 @@ const App = () => {
                             }}
                         >
                             {metaDataWorldwide.map((elem) => (
-                                <CaseType
-                                    background={elem.background}
-                                    type={elem.type}
-                                    added={elem.added}
-                                    cases={elem.cases}
-                                />
+                                <React.Fragment key={elem.type}>
+                                    <CaseType
+                                        background={elem.background}
+                                        type={elem.type}
+                                        added={elem.added}
+                                        cases={elem.cases}
+                                    />
+                                </React.Fragment>
                             ))}
                         </Flexbox>
 
@@ -269,7 +273,10 @@ const App = () => {
                             }}
                         >
                             {countries.map((elem) => (
-                                <MenuItem value={elem.country}>
+                                <MenuItem
+                                    value={elem.country}
+                                    key={elem.country}
+                                >
                                     {elem.country}
                                 </MenuItem>
                             ))}
