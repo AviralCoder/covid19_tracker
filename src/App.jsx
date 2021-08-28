@@ -9,6 +9,7 @@ import Select from "@material-ui/core/Select";
 import MenuItem from "@material-ui/core/MenuItem";
 import CaseTable from "./components/CaseTable";
 import CountryWise from "./components/CountryWise";
+import Contribute from "./components/Contribute";
 
 const App = () => {
     const [casesDetailsWorldwide, setCaseDetailsWorldwide] = useState([
@@ -320,7 +321,7 @@ const App = () => {
                     </Route>
 
                     <Route path="/contribute" exact>
-                        <div className="contribute"></div>
+                        <Contribute />
                     </Route>
 
                     <Route path="/info" exact>

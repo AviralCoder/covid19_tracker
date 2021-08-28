@@ -98,6 +98,14 @@ body {
     padding: 20px;
 }
 
+.contribute-screen {
+    background: white;
+    margin: auto;
+    width: 80%;
+    margin-top: 20px;
+    padding: 20px;
+}
+
 @media screen and (max-width: 768px) {
     .grid {
         grid-template-columns: repeat(1, 1fr) !important;
