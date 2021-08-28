@@ -320,7 +320,7 @@ const App = () => {
                     </Route>
 
                     <Route path="/contribute" exact>
-                        <h1>contribute</h1>
+                        <div className="contribute"></div>
                     </Route>
 
                     <Route path="/info" exact>
