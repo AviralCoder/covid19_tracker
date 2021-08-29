@@ -48,6 +48,12 @@ Or you can locally run it on your computer -
 -   Run `yarn start`
 -   Open `localhost:3000` (it will be automatically opened)
 
+## Code analysis
+
+My code score on Embold -
+
+![alt text for screen readers](/src/assets/embold.png "Text to show on mouseover")
+
 ## License
 
 MIT License (for more info, check the `LICENSE` file)
