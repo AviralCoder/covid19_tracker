@@ -12,7 +12,6 @@ import CaseTable from "./components/CaseTable";
 import CountryWise from "./components/CountryWise";
 import Contribute from "./components/Contribute";
 import Info from "./components/Info";
-import VaccineScreen from "./components/VaccineScreen";
 
 const App = () => {
     const [casesDetailsWorldwide, setCaseDetailsWorldwide] = useState([
