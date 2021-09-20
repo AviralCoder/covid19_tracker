@@ -12,7 +12,6 @@ import HomeIcon from "@material-ui/icons/Home";
 import CodeIcon from "@material-ui/icons/Code";
 import InfoIcon from "@material-ui/icons/Info";
 import DrawerItem from "./DrawerItem";
-import InsertEmoticonIcon from "@material-ui/icons/InsertEmoticon";
 
 const useStyles = makeStyles((theme) => ({
     root: {
