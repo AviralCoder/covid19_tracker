@@ -338,9 +338,6 @@ const App = () => {
                         <Info />
                     </Route>
 
-                    <Route path="/vaccine" exact>
-                        <VaccineScreen />
-                    </Route>
                 </Switch>
             </ThemeProvider>
         </>

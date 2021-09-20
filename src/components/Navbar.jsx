@@ -107,14 +107,6 @@ const Navbar = () => {
                             icon={<InfoIcon />}
                             to="/info"
                         />
-                        <DrawerItem
-                            onClick={() => {
-                                setDrawerOpen(false);
-                            }}
-                            text="Vaccine Statistics"
-                            icon={<InsertEmoticonIcon />}
-                            to="/vaccine"
-                        />
                     </List>
                 </Drawer>
             </div>
