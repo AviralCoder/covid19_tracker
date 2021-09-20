@@ -43,7 +43,7 @@ There is already a in-built contribute in the app but if you have a github accou
 Or you can locally run it on your computer -
 
 -   Install Yarn or Node.js ( Yarn recommended )
--   Run `git clone <repo url>`
+-   Run `git clone https://github.com/AviralCoder/covid19_tracker`
 -   Run `cd <file path>`
 -   Run `yarn start`
 -   Open `localhost:3000` (it will be automatically opened)
