@@ -94,25 +94,25 @@ const App = () => {
                     type: "Confirmed",
                     added: data.todayCases,
                     cases: data.cases,
-                    background: "rgba(255, 110, 110, 0.797)",
+                    background: "rgba(255, 110, 110, 0.70)",
                 },
                 {
                     type: "Active",
                     added: `-`,
                     cases: data.active,
-                    background: "rgba(108, 204, 255, 0.797)",
+                    background: "rgba(108, 204, 255, 0.70)",
                 },
                 {
                     type: "Recovered",
                     added: data.todayRecovered,
                     cases: data.recovered,
-                    background: "rgba(132, 255, 79, 0.797)",
+                    background: "rgba(132, 255, 79, 0.70)",
                 },
                 {
                     type: "Deceased",
                     added: data.todayDeaths,
                     cases: data.deaths,
-                    background: "rgba(172, 175, 177, 0.797)",
+                    background: "rgba(172, 175, 177, 0.70)",
                 },
             ]);
             setMetaDataWorldwide([
@@ -120,25 +120,25 @@ const App = () => {
                     type: "Affected countries",
                     added: `-`,
                     cases: data.affectedCountries,
-                    background: "rgba(240, 255, 74, 0.797)",
+                    background: "rgba(240, 255, 74, 0.70)",
                 },
                 {
                     type: "Tests",
                     added: `-`,
                     cases: data.tests,
-                    background: "rgba(218, 107, 255, 0.797)",
+                    background: "rgba(218, 107, 255, 0.70)",
                 },
                 {
                     type: "Population",
                     added: `-`,
                     cases: data.population,
-                    background: "rgba(255, 108, 55, 0.797)",
+                    background: "rgba(255, 108, 55, 0.70)",
                 },
                 {
                     type: "Critical",
                     added: `-`,
                     cases: data.critical,
-                    background: "rgba(67, 255, 189, 0.797)",
+                    background: "rgba(67, 255, 189, 0.70)",
                 },
             ]);
             setCountries(data2);
@@ -189,16 +189,16 @@ const App = () => {
 
                 <Switch>
                     <Route path="/" exact>
-                        <h2
+                        <h1
                             style={{
                                 textAlign: "center",
-                                marginBottom: 20,
-                                marginTop: 20,
+                                marginBottom: 25,
+                                marginTop: 25,
                                 color: "white",
                             }}
                         >
                             Worldwide
-                        </h2>
+                        </h1>
                         <Flexbox
                             style={{
                                 justifyContent: "space-around",
@@ -238,8 +238,8 @@ const App = () => {
                         <h2
                             style={{
                                 textAlign: "center",
-                                marginBottom: 20,
-                                marginTop: 20,
+                                marginBottom: 25,
+                                marginTop: 25,
                                 color: "white",
                             }}
                         >
@@ -251,8 +251,8 @@ const App = () => {
                         <h2
                             style={{
                                 textAlign: "center",
-                                marginBottom: 20,
-                                marginTop: 20,
+                                marginBottom: 25,
+                                marginTop: 25,
                                 color: "white",
                             }}
                         >
@@ -320,7 +320,7 @@ const App = () => {
                         <p
                             style={{
                                 textAlign: "center",
-                                background: "white",
+                                color: "#ffffff",
                                 padding: 10,
                                 marginTop: 20,
                             }}
