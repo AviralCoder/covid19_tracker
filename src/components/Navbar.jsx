@@ -24,7 +24,7 @@ const useStyles = makeStyles((theme) => ({
         flexGrow: 1,
     },
     navbar: {
-        background: "rgb(57, 57, 57)",
+        background: "rgb(22, 22, 37)",
     },
     list: {
         width: 250,
